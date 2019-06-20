@@ -22,14 +22,14 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+# CONCURRENT_REQUESTS = 1
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 5
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 16
+# CONCURRENT_REQUESTS_PER_DOMAIN = 1
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
@@ -46,7 +46,7 @@ DEFAULT_REQUEST_HEADERS = {
     "Connection": "keep-alive",
     "Content-Length": "0",
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "Cookie": "__jsluid=1225c87a7e36a7678ecce7d97cf04dab; JSESSIONID=716B4F8CEB8404805AD660EE1682E901; __jsl_clearance=1560930123.778|0|GAuxGpgdLS17BhfHegNMThz9VaU%3D",
+    "Cookie": "__jsluid=ab24f5dcc60c5ebc885aa40d7fcef606; __jsl_clearance=1560945062.133|0|v%2BuXklhs5MYy90GrrRk6xBg6uUA%3D",
     "DNT": "1",
     "Origin": "https://www.cnvd.org.cn",
     "Referer": "https://www.cnvd.org.cn/flaw/typelist?typeId=29",
@@ -74,9 +74,9 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'cnvd.pipelines.CnvdPipeline': 300,
-}
+# ITEM_PIPELINES = {
+#    'cnvd.pipelines.CnvdPipeline': 300,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -98,6 +98,3 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = ["521",]
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-PROXY_SERVER = "http://http-dyn.abuyun.com:9020"
-PROXY_USER = "HJ3FL948KK7P750D"
-PROXY_PASS = "622A9B9B2549736E"

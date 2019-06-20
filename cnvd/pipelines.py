@@ -7,7 +7,14 @@
 import json
 
 
-class CnvdPipeline(object):
+class CnvdMetaPipeline(object):
     def process_item(self, item, spider):
-        spider.r.sadd("cnvd:flaw", json.dumps(dict(item), ensure_ascii=False))
+        spider.r.sadd("cnvd:meta", json.dumps(dict(item), ensure_ascii=False))
+        return item
+
+
+class CnvdDetailPipeline(object):
+    def process_item(self, item, spider):
+        spider.r.sadd("cnvd:detail", json.dumps(dict(item), ensure_ascii=False))
+        spider.r.sadd("detail:crawled", item["id"])
         return item

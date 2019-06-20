@@ -13,9 +13,9 @@ class CnvdItem(scrapy.Item):
     # name = scrapy.Field()
     id = scrapy.Field()
     title = scrapy.Field()
+    click = scrapy.Field()
     rank = scrapy.Field()
     comment = scrapy.Field()
     follow = scrapy.Field()
     public_time = scrapy.Field()
     detail = scrapy.Field()
-
